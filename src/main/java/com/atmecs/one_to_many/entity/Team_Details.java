@@ -69,5 +69,10 @@ public class Team_Details
 
 	}
 
-  
+	public void setEmployee_det(Employee_Details employee_Details) 
+	{
+		
+	}
+
+
 }

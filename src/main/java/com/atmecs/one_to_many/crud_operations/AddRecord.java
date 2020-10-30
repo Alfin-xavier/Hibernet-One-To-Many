@@ -21,11 +21,11 @@ public class AddRecord
 			
 			  Transaction transaction = session.beginTransaction();
 			  
-			  Team_Details team_det = new Team_Details("Sapho");
+			  Team_Details team_det = new Team_Details("SDET");
 			  
-			  Employee_Details emp_det1 = new Employee_Details("Shankari","shankari.sundhar@gmail.com",team_det); 
-			  Employee_Details emp_det2 = new Employee_Details("Suji","suji.stephen@gmail.com",team_det);
-			  Employee_Details emp_det3 = new Employee_Details("Suji","suji.bhagavathi@gmail.com",team_det);
+			  Employee_Details emp_det1 = new Employee_Details("Alfin","alfin.anthonyraj@atmecs.com.com",team_det); 
+			  Employee_Details emp_det2 = new Employee_Details("Padma","padma.inba@gmail.com",team_det);
+			  Employee_Details emp_det3 = new Employee_Details("Vasu","vasu.vanu@gmail.com",team_det);
 			  
 			  Set<Employee_Details> employee_det = new HashSet<Employee_Details>();
 			  employee_det.add(emp_det1); 
