@@ -12,7 +12,7 @@ public class CrudMenu
 		
 		do
 		{
-			System.out.println("** One To One Mapping **\n");
+			System.out.println("** One To Many Mapping **\n");
 			System.out.println("1.Add Record   2.Display Record  3.Update Record  4.Delete Record\n");
 			System.out.println("Select an option :");
 			option = scr.nextInt();

@@ -10,7 +10,6 @@ import com.atmecs.one_to_many.utility.HibernateUtility;
 
 public class UpdateRecord 
 {
-	@Test
 	public void updateRecord()
 	{
 		Scanner scan = new  Scanner(System.in);
