@@ -29,14 +29,14 @@ public class UpdateRecord
 			{
 				System.out.println("Enter the value to be Modify: ");
 				String name = scan.next();
-				String updateNameQuery = "UPDATE Manager_Details manager_det SET manager_det.m_name='"+name+"' WHERE m_id='"+id+"'";
+				String updateNameQuery = "UPDATE Employee_Details emp_det SET emp_det.e_name='"+name+"' WHERE e_id='"+id+"'";
 				session.createQuery(updateNameQuery).executeUpdate();
 			}
 			else
 			{
 				System.out.println("Enter the value to be Modify :");
 				String email = scan.next();
-				String updateEmailQuery = "UPDATE Manager_Details manager_det SET manager_det.m_email='"+email+"' WHERE m_id='"+id+"'";
+				String updateEmailQuery = "UPDATE Employee_Details emp_det SET emp_det.e_email='"+email+"' WHERE e_id='"+id+"'";
 				session.createQuery(updateEmailQuery).executeUpdate();
 			}
 			

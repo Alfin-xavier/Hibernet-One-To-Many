@@ -1,53 +1,44 @@
 package com.atmecs.one_to_many.crud_operations;
 
+import java.util.HashSet;
 import java.util.Scanner;
-
+import java.util.Set;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import com.atmecs.one_to_many.entity.Employee_Details;
+import com.atmecs.one_to_many.entity.Team_Details;
 
-import com.atmecs.one_to_many.entity.Manager_Details;
-import com.atmecs.one_to_many.entity.Project_Details;
-
-public class AddRecord {
-
+public class AddRecord 
+{
 	public void addRecord() 
 	{
 
 		Scanner scan = new Scanner(System.in);
 		
 		final Session session = com.atmecs.one_to_many.utility.HibernateUtility.getHibernateSession();
-		try {
-			Transaction transaction = session.beginTransaction();
-
-			System.out.println("Enter the number of records you want to Add :");
-
-			int quantity = scan.nextInt();
-
-			for (int i = 1; i <= quantity; i++) 
-			{
-				System.out.println("Enter the no.of details :" + i+"\n");
-
-				System.out.println("Enter the Manager Name :");
-				String m_name = scan.next();
-				System.out.println("Enter the Mail:");
-				String m_email = scan.next();
-
-				System.out.println("Enter the Project Name :");
-				String p_name = scan.next();
-				System.out.println("Enter Duration: ");
-				String p_duration = scan.next();
-
-				Manager_Details manager_det = new Manager_Details();
-				
-				manager_det.setM_name(m_name);
-				manager_det.setM_email(m_email);
-				manager_det.setProj_det(new Project_Details(p_name,p_duration));
-				
-				session.save(manager_det);
-
-			}
+		try 
+		{
+			
+			  Transaction transaction = session.beginTransaction();
+			  
+			  Team_Details team_det = new Team_Details("Sapho");
+			  
+			  Employee_Details emp_det1 = new Employee_Details("Shankari","shankari.sundhar@gmail.com",team_det); 
+			  Employee_Details emp_det2 = new Employee_Details("Suji","suji.stephen@gmail.com",team_det);
+			  Employee_Details emp_det3 = new Employee_Details("Suji","suji.bhagavathi@gmail.com",team_det);
+			  
+			  Set<Employee_Details> employee_det = new HashSet<Employee_Details>();
+			  employee_det.add(emp_det1); 
+			  employee_det.add(emp_det2);
+			  employee_det.add(emp_det3);
+			  
+			  team_det.setEmployee_det(employee_det);
+			 
+			
+			session.save(team_det);
+			
 			transaction.commit();
-		} 
+		}
 		finally 
 		{
 			session.close();
