@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.atmecs.one_to_many.crud_operations.DeleteRecord">
+      <class name="com.atmecs.one_to_many.crud_operations.AddRecord">
         <methods>
-          <include name="deleteRecord"/>
+          <include name="addRecord"/>
         </methods>
-      </class> <!-- com.atmecs.one_to_many.crud_operations.DeleteRecord -->
+      </class> <!-- com.atmecs.one_to_many.crud_operations.AddRecord -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,17 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-10-30T17:33:00 IST" name="Default suite" finished-at="2020-10-30T17:33:16 IST" duration-ms="15800">
+  <suite started-at="2020-11-02T11:29:22 IST" name="Default suite" finished-at="2020-11-02T11:30:28 IST" duration-ms="65805">
     <groups>
     </groups>
-    <test started-at="2020-10-30T17:33:00 IST" name="Default test" finished-at="2020-10-30T17:33:16 IST" duration-ms="15800">
-      <class name="com.atmecs.one_to_many_mapping.test.OneToOneMapping">
-        <test-method signature="employee_details()[pri:0, instance:com.atmecs.one_to_many_mapping.test.OneToOneMapping@2bbf180e]" started-at="2020-10-30T17:33:00 IST" name="employee_details" finished-at="2020-10-30T17:33:16 IST" duration-ms="15764" status="PASS">
+    <test started-at="2020-11-02T11:29:22 IST" name="Default test" finished-at="2020-11-02T11:30:28 IST" duration-ms="65805">
+      <class name="com.atmecs.one_to_many.crud_operations.AddRecord">
+        <test-method signature="addRecord()[pri:0, instance:com.atmecs.one_to_many.crud_operations.AddRecord@23529fee]" started-at="2020-11-02T11:29:22 IST" name="addRecord" finished-at="2020-11-02T11:30:28 IST" duration-ms="65748" status="FAIL">
+          <exception class="org.hibernate.exception.ConstraintViolationException">
+            <message>
+              <![CDATA[could not execute statement]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.hibernate.exception.ConstraintViolationException: could not execute statement
+at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:59)
+at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)
+at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:200)
+at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:57)
+at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:43)
+at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3153)
+at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3759)
+at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:84)
+at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:645)
+at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:282)
+at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:263)
+at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:317)
+at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:330)
+at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:287)
+at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:193)
+at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:123)
+at org.hibernate.event.internal.DefaultSaveOrUpdateEventListener.saveWithGeneratedOrRequestedId(DefaultSaveOrUpdateEventListener.java:194)
+at org.hibernate.event.internal.DefaultSaveEventListener.saveWithGeneratedOrRequestedId(DefaultSaveEventListener.java:38)
+at org.hibernate.event.internal.DefaultSaveOrUpdateEventListener.entityIsTransient(DefaultSaveOrUpdateEventListener.java:179)
+at org.hibernate.event.internal.DefaultSaveEventListener.performSaveOrUpdate(DefaultSaveEventListener.java:32)
+at org.hibernate.event.internal.DefaultSaveOrUpdateEventListener.onSaveOrUpdate(DefaultSaveOrUpdateEventListener.java:75)
+at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:102)
+at org.hibernate.internal.SessionImpl.fireSave(SessionImpl.java:637)
+at org.hibernate.internal.SessionImpl.save(SessionImpl.java:630)
+at org.hibernate.internal.SessionImpl.save(SessionImpl.java:625)
+at com.atmecs.one_to_many.crud_operations.AddRecord.addRecord(AddRecord.java:66)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+at org.testng.TestRunner.privateRun(TestRunner.java:767)
+at org.testng.TestRunner.run(TestRunner.java:588)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
+at org.testng.TestNG.runSuites(TestNG.java:1066)
+at org.testng.TestNG.run(TestNG.java:1034)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'WK' for key 'team_details.t_name'
+at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092)
+at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040)
+at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1347)
+at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025)
+at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+... 51 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.hibernate.exception.ConstraintViolationException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- employee_details -->
-      </class> <!-- com.atmecs.one_to_many_mapping.test.OneToOneMapping -->
+        </test-method> <!-- addRecord -->
+      </class> <!-- com.atmecs.one_to_many.crud_operations.AddRecord -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
